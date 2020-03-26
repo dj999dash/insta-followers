@@ -1,6 +1,6 @@
 from selenium import webdriver
 from time import sleep
-from secrets import pw
+from secrets import userid , pw
 
 class Instabot:
     def __init__(self,username,pw):
@@ -8,7 +8,7 @@ class Instabot:
         self.driver.get("https://www.instagram.com")
         sleep(2)
         self.driver.find_element_by_xpath("//input[@name=\"username\"]")\
-            .send_keys(username)
+            .send_keys(userid)
         self.driver.find_element_by_xpath("//input[@name=\"password\"]")\
             .send_keys(pw)
         self.driver.find_element_by_xpath('//button[@type="submit"]')\
@@ -50,5 +50,5 @@ class Instabot:
         return names
 
 
-my_bot = Instabot('divya1999dash', pw)
+my_bot = Instabot(username, pw)
 my_bot.get_unfollowers()
