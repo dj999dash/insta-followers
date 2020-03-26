@@ -1,0 +1,3 @@
+selenium==3.141.0
+urllib3==1.25.7
+chromedriver version == 80.0.3987.106 (use latest version)
